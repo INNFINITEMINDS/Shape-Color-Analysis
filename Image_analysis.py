@@ -1,7 +1,6 @@
 #######################################################################################
 
-# TEAM ID  :  eYRC#1029
-# TEAM MEMBERS : KARAN AGGARWAL, SHIVAM MEHRA, ADYA SHAMBHAVI, SHWETA KUMARI
+# To detect the position, shape and color of an image.
 
 ######################################################################################
 
@@ -13,7 +12,7 @@ import argparse
 import imutils
 import math
 from os.path import join,isfile
-filename = 'results_1029.csv'
+filename = 'outputimage.csv'
 #################################################################################################
 # DO NOT EDIT!!!
 #################################################################################################
@@ -156,7 +155,7 @@ if __name__ == "__main__":
     #iterate over each file in the directory
     for fp in onlyfiles:
         #Open the csv to write in append mode
-        filep = open('results_1029.csv','a')
+        filep = open('outputimage.csv','a')
         #this csv will later be used to save processed data, thus write the file name of the image 
         filep.write(fp)
         #close the file so that it can be reopened again later
@@ -165,7 +164,7 @@ if __name__ == "__main__":
         data = main(fp)
         print data
         #open the csv
-        filep = open('results_1029.csv','a')
+        filep = open('outputimage.csv','a')
         #make a newline entry so that the next image data is written on a newline
         filep.write('\n')
         #close the file
